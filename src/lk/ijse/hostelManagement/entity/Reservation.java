@@ -19,10 +19,10 @@ public class Reservation {
     private LocalDate date;
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "student_Id", referencedColumnName = "Student_Id")
-    private lk.ijse.hibernate.entity.Student student_id;
+    private Student student_id;
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "room_id", referencedColumnName = "room_id")
-    private lk.ijse.hibernate.entity.Room room_id;
+    private Room room_id;
     private String key_money;
     private Double advance;
     private String status;
