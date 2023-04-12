@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane fx:id="dashboardPane" prefHeight="900.0" prefWidth="1300.0" style="-fx-background-color: #000022;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagement.controller.DashBoardFormController">
+   <children>
+      <Polyline fill="#f5bb00" layoutX="184.0" layoutY="203.0" points="-163.0, -203.0, -163.0, 178.0, -185.0, 178.0, -185.0, -203.0" stroke="#f5bb00" strokeType="INSIDE" />
+      <Polyline fill="#f5bb00" layoutX="240.0" layoutY="217.0" points="160.0, -217.0, 160.0, -197.0, -241.0, -197.0, -241.0, -217.0" stroke="#f5bb00" strokeType="INSIDE" />
+      <Polyline fill="#f5bb00" layoutX="1471.0" layoutY="722.0" points="-163.0, -203.0, -163.0, 178.0, -185.0, 178.0, -185.0, -203.0" stroke="#f5bb00" strokeType="INSIDE" />
+      <Polyline fill="#f5bb00" layoutX="1148.0" layoutY="1107.0" points="160.0, -217.0, 160.0, -197.0, -241.0, -197.0, -241.0, -217.0" stroke="#f5bb00" strokeType="INSIDE" />
+      <BorderPane layoutX="78.0" layoutY="305.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: white;">
+         <center>
+            <ImageView fitHeight="298.0" fitWidth="306.0" onMouseClicked="#btnMakeRegistrationStudent" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../assests/images__3_-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
+      <BorderPane layoutX="944.0" layoutY="305.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: white;">
+         <center>
+            <ImageView fitHeight="301.0" fitWidth="298.0" onMouseClicked="#btnFindRemainKeyMoneyStudent" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../assests/download%20(1).png" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
+      <BorderPane layoutX="504.0" layoutY="305.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: white;">
+         <center>
+            <ImageView fitHeight="297.0" fitWidth="304.0" onMouseClicked="#btnManageRooms" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../assests/hos.png" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
+      <Text fill="#f95738" fontSmoothingType="LCD" layoutX="386.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Dashboard">
+         <font>
+            <Font name="System Bold" size="55.0" />
+         </font>
+      </Text>
+      <Polyline fill="#f5bb00" layoutX="408.0" layoutY="356.0" points="665.0, -205.00001525878906, 665.0, -227.0, -241.0, -205.0, -241.0, -227.00001525878906" stroke="#f5bb00" strokeType="INSIDE" />
+      <ImageView fitHeight="90.0" fitWidth="85.0" layoutX="47.0" layoutY="781.0" onMouseClicked="#btnNavigateToLoginPage" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/bac.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

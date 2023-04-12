@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane fx:id="manageStudentPane" prefHeight="900.0" prefWidth="1300.0" style="-fx-background-color: #000022;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagement.controller.ManageStudentFormController">
+   <children>
+      <Polyline fill="#f5bb00" layoutX="241.0" layoutY="217.0" points="160.0, -217.0, 160.0, -197.0, -241.0, -197.0, -241.0, -217.0" stroke="#f5bb00" strokeType="INSIDE" />
+      <Polyline fill="#f5bb00" layoutX="183.0" layoutY="203.0" points="-163.0, -203.0, -163.0, 178.0, -185.0, 178.0, -185.0, -203.0" stroke="#f5bb00" strokeType="INSIDE" />
+      <Polyline fill="#f5bb00" layoutX="1140.0" layoutY="1103.0" points="160.0, -217.0, 160.0, -197.0, -241.0, -197.0, -241.0, -217.0" stroke="#f5bb00" strokeType="INSIDE" />
+      <Polyline fill="#f5bb00" layoutX="1471.0" layoutY="728.0" points="-163.0, -203.0, -163.0, 178.0, -185.0, 178.0, -185.0, -203.0" stroke="#f5bb00" strokeType="INSIDE" />
+      <Text fill="#f95738" fontSmoothingType="LCD" layoutX="416.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Student">
+         <font>
+            <Font name="System Bold" size="55.0" />
+         </font>
+      </Text>
+      <Polyline fill="#f5bb00" layoutX="418.0" layoutY="332.0" points="665.0, -205.00001525878906, 665.0, -227.0, -241.0, -205.0, -241.0, -227.00001525878906" stroke="#f5b800" strokeType="INSIDE" />
+      <JFXTextField fx:id="txtStudentId" focusColor="WHITE" layoutX="74.0" layoutY="171.0" prefHeight="39.0" prefWidth="297.0" promptText="Student ID :" style="-fx-background-color: #F9D307;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtStudentName" focusColor="WHITE" layoutX="492.0" layoutY="171.0" prefHeight="39.0" prefWidth="324.0" promptText="Student Name :" style="-fx-background-color: #F9D307;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtStudentAddress" focusColor="WHITE" layoutX="938.0" layoutY="172.0" prefHeight="39.0" prefWidth="324.0" promptText="Student Address :" style="-fx-background-color: #F9D307;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtStudentContactNo" focusColor="WHITE" layoutX="74.0" layoutY="242.0" prefHeight="39.0" prefWidth="297.0" promptText="Contact No :" style="-fx-background-color: #F9D307;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXDatePicker fx:id="datePikerStudentDOB" layoutX="492.0" layoutY="242.0" prefHeight="39.0" prefWidth="324.0" promptText="Date of Birth :" style="-fx-background-color: #F9D307;" />
+      <JFXComboBox fx:id="combStudentGender" focusColor="WHITE" layoutX="938.0" layoutY="242.0" prefHeight="39.0" prefWidth="324.0" promptText="Gender :" style="-fx-background-color: #F9D307;" unFocusColor="WHITE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="58.0" layoutX="920.0" layoutY="299.0" stroke="BLACK" strokeType="INSIDE" width="360.0" />
+      <JFXTextField fx:id="txtStudentSearch" layoutX="930.0" layoutY="305.0" prefHeight="45.0" prefWidth="216.0" promptText="ST-001" style="-fx-background-color: white;">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="1154.0" layoutY="305.0" onAction="#btnStudentSearch" prefHeight="45.0" prefWidth="108.0" style="-fx-background-color: #EFCE3F;" text="Search">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblStudent" layoutX="56.0" layoutY="381.0" prefHeight="482.0" prefWidth="955.0" style="-fx-background-color: #F6E35D; -fx-border-color: white; -fx-border-width: 10; -fx-border-radius: 20; -fx-background-radius: 20;">
+        <columns>
+          <TableColumn prefWidth="97.0" text="Student ID " />
+          <TableColumn prefWidth="172.0" text="Student Name " />
+            <TableColumn prefWidth="207.0" text="Student Address " />
+            <TableColumn prefWidth="160.0" text="Contact No " />
+            <TableColumn prefWidth="180.0" text="Date of Birth " />
+            <TableColumn prefWidth="138.0" text="Gender " />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="1106.0" layoutY="444.0" onAction="#btnStudentAdd" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="+ Add New">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1106.0" layoutY="607.0" onAction="#btnStudentDelete" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="Delete">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1106.0" layoutY="525.0" onAction="#btnStudentSave" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="Save">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="31.0" layoutY="36.0" onAction="#btnBackToDashboard" prefHeight="51.0" prefWidth="140.0" style="-fx-background-color: white;" text="&lt;&lt;- Back">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
