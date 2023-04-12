@@ -88,5 +88,19 @@
             <Image url="@../assests/img-happy-hostel-minsk-1.jpg" />
          </image>
       </ImageView>
+      <Label fx:id="lblHide" layoutX="971.0" layoutY="510.0" onMousePressed="#showPasswordOnMousePressed" onMouseReleased="#hidePasswordOnMousePressedd" prefHeight="31.0" prefWidth="42.0">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/download__3_-removebg-preview%20(1).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="657.0" layoutY="690.0" onAction="#btnCancel" prefHeight="51.0" prefWidth="137.0" style="-fx-background-color: #344050; -fx-background-radius: 30;" text="CANCEL" textFill="#f5bb00">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
