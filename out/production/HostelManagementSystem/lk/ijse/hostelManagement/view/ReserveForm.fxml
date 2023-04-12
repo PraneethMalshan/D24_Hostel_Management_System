@@ -38,7 +38,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <JFXDatePicker fx:id="datePikerReserveForm" layoutX="538.0" layoutY="191.0" prefHeight="35.0" prefWidth="324.0" style="-fx-background-color: #F9D307;" />
+      <JFXDatePicker fx:id="datePikerReserveForm" layoutX="538.0" layoutY="191.0" prefHeight="35.0" prefWidth="324.0" promptText="Date :" style="-fx-background-color: #F9D307;" />
       <JFXButton layoutX="1087.0" layoutY="197.0" onAction="#btnAddStudentReserveForm" prefHeight="81.0" prefWidth="180.0" style="-fx-background-color: #EFCE3F;" text="Add Student">
          <font>
             <Font name="System Bold" size="24.0" />
