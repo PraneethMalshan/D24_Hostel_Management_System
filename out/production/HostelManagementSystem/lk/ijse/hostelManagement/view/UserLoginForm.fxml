@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -30,7 +30,6 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <JFXPasswordField fx:id="txtPasswordLogin" layoutX="787.0" layoutY="510.0" prefHeight="31.0" prefWidth="226.0" promptText="Password" />
       <JFXTextField fx:id="txtUserNameLogin" layoutX="787.0" layoutY="438.0" prefHeight="31.0" prefWidth="226.0" promptText="UserName" />
       <Text layoutX="1119.0" layoutY="663.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN">
          <font>
@@ -88,11 +87,12 @@
             <Image url="@../assests/img-happy-hostel-minsk-1.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="lblHide" layoutX="971.0" layoutY="510.0" onMousePressed="#showPasswordOnMousePressed" onMouseReleased="#hidePasswordOnMousePressedd" prefHeight="31.0" prefWidth="42.0">
+      <PasswordField fx:id="txtUserPasswordLogin" layoutX="787.0" layoutY="510.0" prefHeight="31.0" prefWidth="233.0" />
+      <Label fx:id="lblHide" layoutX="990.0" layoutY="510.0" onMousePressed="#showPasswordOnMousePressed" onMouseReleased="#hidePasswordOnMousePressedd" prefHeight="31.0" prefWidth="42.0">
          <graphic>
             <ImageView fitHeight="31.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assests/download__3_-removebg-preview%20(1).png" />
+                  <Image url="@../assests/Close_eye.png" />
                </image>
             </ImageView>
          </graphic>

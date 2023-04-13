@@ -19,11 +19,9 @@ import java.io.IOException;
 
 public class UserLoginFormController {
 
+    public PasswordField txtUserPasswordLogin;
     @FXML
     private AnchorPane LoginPane;
-
-    @FXML
-    private JFXPasswordField txtPasswordLogin;
 
     @FXML
     private JFXTextField txtUserNameLogin;
@@ -49,9 +47,9 @@ public class UserLoginFormController {
         view.setFitWidth(20);
         lblHide.setGraphic(view);
 
-        txtPasswordLogin.setText(txtPasswordLogin.getPromptText());
-        txtPasswordLogin.setPromptText("");
-        txtPasswordLogin.setDisable(false);
+        txtUserPasswordLogin.setText(txtUserPasswordLogin.getPromptText());
+        txtUserPasswordLogin.setPromptText("");
+        txtUserPasswordLogin.setDisable(false);
     }
 
     @FXML
@@ -62,10 +60,10 @@ public class UserLoginFormController {
         view.setFitWidth(20);
         lblHide.setGraphic(view);
 
-        txtPasswordLogin.setPromptText(txtPasswordLogin.getText());
-        txtPasswordLogin.setText("");
-        txtPasswordLogin.setDisable(true);
-        txtPasswordLogin.requestFocus();
+        txtUserPasswordLogin.setPromptText(txtUserPasswordLogin.getText());
+        txtUserPasswordLogin.setText("");
+        txtUserPasswordLogin.setDisable(true);
+        txtUserPasswordLogin.requestFocus();
     }
 
 }
