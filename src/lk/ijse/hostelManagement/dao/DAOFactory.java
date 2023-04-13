@@ -2,6 +2,8 @@ package lk.ijse.hostelManagement.dao;
 
 import lk.ijse.hostelManagement.dao.custom.impl.ReserveDAOImpl;
 import lk.ijse.hostelManagement.dao.custom.impl.RoomDAOImpl;
+import lk.ijse.hostelManagement.dao.custom.impl.StudentDAOImpl;
+import lk.ijse.hostelManagement.dao.custom.impl.UserDAOImpl;
 
 public class DAOFactory {
     private static DAOFactory daoFactory;
@@ -16,11 +18,17 @@ public class DAOFactory {
 
     public SuperDAO getDAO(DAOTypes types) {
         switch (types){
-            case RESERVE:
-                return new ReserveDAOImpl();
+            case STUDENT:
+                return new StudentDAOImpl();
 
             case ROOM:
                 return new RoomDAOImpl();
+
+            case RESERVE:
+                return new ReserveDAOImpl();
+
+            case USER:
+                return new UserDAOImpl();
 
             default:
                 return null;
@@ -28,6 +36,6 @@ public class DAOFactory {
     }
 
     public enum DAOTypes{
-         ROOM, RESERVE
+        STUDENT, ROOM, RESERVE, USER
     }
 }

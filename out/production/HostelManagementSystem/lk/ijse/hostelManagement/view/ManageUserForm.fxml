@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane fx:id="ManageUserPane" prefHeight="900.0" prefWidth="1300.0" style="-fx-background-color: #000022;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagement.controller.ManageUserFormController">
+   <children>
+      <Polyline fill="#f5bb00" layoutX="241.0" layoutY="221.0" points="160.0, -221.0, 160.0, -197.0, -241.0, -197.0, -241.0, -221.0" stroke="#f5bb00" strokeType="INSIDE" />
+      <Polyline fill="#f5bb00" layoutX="184.0" layoutY="204.0" points="-163.0, -203.0, -163.0, 178.0, -185.0, 178.0, -185.0, -203.0" stroke="#f5bb00" strokeType="INSIDE" />
+      <Polyline fill="#f5bb00" layoutX="1160.0" layoutY="1123.0" points="160.0, -217.0, 160.0, -197.0, -241.0, -197.0, -241.0, -217.0" stroke="#f5bb00" strokeType="INSIDE" />
+      <Polyline fill="#f5bb00" layoutX="1491.0" layoutY="748.0" points="-163.0, -203.0, -163.0, 178.0, -185.0, 178.0, -185.0, -203.0" stroke="#f5bb00" strokeType="INSIDE" />
+      <Text fill="#f95738" fontSmoothingType="LCD" layoutX="461.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage User">
+         <font>
+            <Font name="System Bold" size="55.0" />
+         </font>
+      </Text>
+      <Polyline fill="#f5bb00" layoutX="438.0" layoutY="353.0" points="665.0, -205.00001525878906, 665.0, -227.0, -241.0, -205.0, -241.0, -227.00001525878906" stroke="#f5b800" strokeType="INSIDE" />
+      <JFXTextField fx:id="txtUserId" focusColor="WHITE" layoutX="94.0" layoutY="191.0" prefHeight="39.0" prefWidth="324.0" promptText="User ID :" style="-fx-background-color: #F9D307;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtUserName" focusColor="WHITE" layoutX="507.0" layoutY="191.0" prefHeight="39.0" prefWidth="324.0" promptText="User Name :" style="-fx-background-color: #F9D307;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContactNo" focusColor="WHITE" layoutX="94.0" layoutY="250.0" prefHeight="39.0" prefWidth="324.0" promptText="Contact No :" style="-fx-background-color: #F9D307;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPassword" focusColor="WHITE" layoutX="507.0" layoutY="250.0" prefHeight="39.0" prefWidth="324.0" promptText="Password :" style="-fx-background-color: #F9D307;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="tblUser" layoutX="76.0" layoutY="401.0" prefHeight="482.0" prefWidth="955.0" style="-fx-background-color: #F6E35D; -fx-border-color: white; -fx-border-width: 10; -fx-border-radius: 20; -fx-background-radius: 20;">
+         <columns>
+            <TableColumn prefWidth="138.99996948242188" text="User ID " />
+            <TableColumn prefWidth="204.0" text="User Name" />
+            <TableColumn prefWidth="162.0" text="User Address" />
+            <TableColumn prefWidth="182.0" text="Contact No" />
+            <TableColumn prefWidth="144.0" text="Password" />
+            <TableColumn prefWidth="102.0" text="Gender" />
+         </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="1126.0" layoutY="464.0" onAction="#btnUserAdd" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="+ Add New">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1126.0" layoutY="627.0" onAction="#btnUserDelete" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="Delete">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1126.0" layoutY="545.0" onAction="#btnUserSave" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="Save">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="51.0" layoutY="56.0" onAction="#btnBackManageUserToDashboard" prefHeight="51.0" prefWidth="140.0" style="-fx-background-color: white;" text="&lt;&lt;- Back">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtUserAddress" focusColor="WHITE" layoutX="904.0" layoutY="191.0" prefHeight="39.0" prefWidth="324.0" promptText="User Address :" style="-fx-background-color: #F9D307;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="combGender" focusColor="#fcfcfc" layoutX="904.0" layoutY="250.0" prefHeight="39.0" prefWidth="324.0" promptText="Gender :" style="-fx-background-color: #F9D307;" unFocusColor="WHITE" />
+   </children>
+</AnchorPane>
