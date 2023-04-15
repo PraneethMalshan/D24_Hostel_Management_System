@@ -10,7 +10,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane fx:id="ManageUserPane" prefHeight="900.0" prefWidth="1300.0" style="-fx-background-color: #000022;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagement.controller.ManageUserFormController">
    <children>
       <Polyline fill="#f5bb00" layoutX="241.0" layoutY="221.0" points="160.0, -221.0, 160.0, -197.0, -241.0, -197.0, -241.0, -221.0" stroke="#f5bb00" strokeType="INSIDE" />
@@ -53,22 +52,22 @@
             <TableColumn prefWidth="102.0" text="Gender" />
          </columns>
       </TableView>
-      <JFXButton buttonType="RAISED" layoutX="1126.0" layoutY="464.0" onAction="#btnUserAdd" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="+ Add New">
+      <JFXButton fx:id="btnAddNewUser" buttonType="RAISED" layoutX="1126.0" layoutY="464.0" onAction="#btnAddNewUserOnAction" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="+ Add New">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="1126.0" layoutY="627.0" onAction="#btnUserDelete" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="Delete">
+      <JFXButton fx:id="btnUserDelete" buttonType="RAISED" layoutX="1126.0" layoutY="627.0" onAction="#btnUserDeleteOnAction" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="Delete">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="1126.0" layoutY="545.0" onAction="#btnUserSave" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="Save">
+      <JFXButton fx:id="btnUserSave" buttonType="RAISED" layoutX="1126.0" layoutY="545.0" onAction="#btnUserSave" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="Save">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="51.0" layoutY="56.0" onAction="#btnBackManageUserToDashboard" prefHeight="51.0" prefWidth="140.0" style="-fx-background-color: white;" text="&lt;&lt;- Back">
+      <JFXButton fx:id="btnBack" buttonType="RAISED" layoutX="51.0" layoutY="56.0" onAction="#btnBackOnActionManageUserToDashboard" onMouseClicked="#navigateToHome" prefHeight="51.0" prefWidth="140.0" style="-fx-background-color: white;" text="&lt;&lt;- Back">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>

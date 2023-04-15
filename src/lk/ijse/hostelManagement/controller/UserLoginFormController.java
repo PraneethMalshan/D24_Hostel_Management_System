@@ -14,28 +14,60 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lk.ijse.hostelManagement.bo.BOFactory;
+import lk.ijse.hostelManagement.bo.custom.UserBO;
+import lk.ijse.hostelManagement.dto.LoginDTO;
+import lk.ijse.hostelManagement.util.NotificationController;
+import lk.ijse.hostelManagement.util.UILoader;
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class UserLoginFormController {
 
     public PasswordField txtUserPasswordLogin;
     @FXML
     private AnchorPane LoginPane;
-
     @FXML
     private JFXTextField txtUserNameLogin;
-
     @FXML
     private Label lblHide;
 
-    @FXML
-    void btnLogin(ActionEvent event) {
+    int attempts = 0;
 
+    private final UserBO userBO = (UserBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.USER);
+
+
+    @FXML
+    void btnLogin(ActionEvent event) throws SQLException, IOException, ClassNotFoundException {
+        UILoader.LoginOnAction(LoginPane, "DashBoardForm");
+        NotificationController.LoginSuccessfulNotification("Admin");
+        ArrayList<LoginDTO> loginDTOS = userBO.getAllUsers();
+        attempts++;
+        loginDTOS.forEach(e -> {
+            if (attempts <= 3){
+                if (e.getUserID().equals(txtUserNameLogin.getText()) && e.getPassword().equals(txtUserPasswordLogin.getText())){
+                    try {
+                        UILoader.LoginOnAction(LoginPane, "DashBoardForm");
+                    } catch (IOException | SQLException ex) {
+                        ex.printStackTrace();
+                    }
+                }else {
+
+                }
+            }else {
+                txtUserNameLogin.setEditable(false);
+                txtUserPasswordLogin.setEditable(false);
+                NotificationController.LoginUnSuccessfulNotification("Account is Temporarily Disabled or You Did not Sign in Correctly.");
+            }
+        });
     }
 
     @FXML
     void btnCancel(ActionEvent event) {
+        txtUserNameLogin.clear();
+        txtUserPasswordLogin.clear();
 
     }
 

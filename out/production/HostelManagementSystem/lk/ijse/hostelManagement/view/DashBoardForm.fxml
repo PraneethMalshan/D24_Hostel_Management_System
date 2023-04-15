@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -7,7 +9,6 @@
 <?import javafx.scene.shape.Polyline?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
 
 <AnchorPane fx:id="dashboardPane" prefHeight="900.0" prefWidth="1300.0" style="-fx-background-color: #000022;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagement.controller.DashBoardFormController">
    <children>
@@ -17,7 +18,7 @@
       <Polyline fill="#f5bb00" layoutX="1148.0" layoutY="1107.0" points="160.0, -217.0, 160.0, -197.0, -241.0, -197.0, -241.0, -217.0" stroke="#f5bb00" strokeType="INSIDE" />
       <BorderPane layoutX="78.0" layoutY="305.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: white;">
          <center>
-            <ImageView fitHeight="298.0" fitWidth="306.0" onMouseClicked="#btnMakeRegistrationStudent" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+            <ImageView fx:id="imgStudent" fitHeight="298.0" fitWidth="306.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                <image>
                   <Image url="@../assests/images__3_-removebg-preview.png" />
                </image>
@@ -26,7 +27,7 @@
       </BorderPane>
       <BorderPane layoutX="944.0" layoutY="305.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: white;">
          <center>
-            <ImageView fitHeight="301.0" fitWidth="298.0" onMouseClicked="#btnFindRemainKeyMoneyStudent" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+            <ImageView fx:id="imgKeyMoney" fitHeight="301.0" fitWidth="298.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                <image>
                   <Image url="@../assests/download%20(1).png" />
                </image>
@@ -35,7 +36,7 @@
       </BorderPane>
       <BorderPane layoutX="504.0" layoutY="305.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: white;">
          <center>
-            <ImageView fitHeight="297.0" fitWidth="304.0" onMouseClicked="#btnManageRooms" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+            <ImageView fx:id="imgRooms" fitHeight="297.0" fitWidth="304.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                <image>
                   <Image url="@../assests/hos.png" />
                </image>
@@ -48,10 +49,22 @@
          </font>
       </Text>
       <Polyline fill="#f5bb00" layoutX="408.0" layoutY="356.0" points="665.0, -205.00001525878906, 665.0, -227.0, -241.0, -205.0, -241.0, -227.00001525878906" stroke="#f5bb00" strokeType="INSIDE" />
-      <ImageView fitHeight="90.0" fitWidth="85.0" layoutX="47.0" layoutY="781.0" onMouseClicked="#btnNavigateToLoginPage" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="btnBack" fitHeight="90.0" fitWidth="85.0" layoutX="47.0" layoutY="781.0" onDragDetected="#BackOnAction" onMouseClicked="#navigateToLoginPage" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assests/bac.png" />
          </image>
       </ImageView>
+      <JFXButton fx:id="btnManageUser" layoutX="1050.0" layoutY="205.0" onAction="#userOnAction" prefHeight="62.0" prefWidth="194.0" style="-fx-background-color: #DEB841;" text="Manage User">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblMenu" layoutX="426.0" layoutY="638.0" prefHeight="38.0" prefWidth="416.0" text="WELCOME" textAlignment="CENTER" textFill="#fc9300">
+         <font>
+            <Font name="Berlin Sans FB" size="34.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDescription" layoutX="363.0" layoutY="729.0" prefHeight="17.0" prefWidth="454.0" text="Please select one of above main operations to processed" textAlignment="CENTER" textFill="WHITE" />
+      <Text fill="WHITE" layoutX="309.0" layoutY="854.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright © 2023  Hostel Management System. All Right Reserved Design By Praneeth Malshan" />
    </children>
 </AnchorPane>

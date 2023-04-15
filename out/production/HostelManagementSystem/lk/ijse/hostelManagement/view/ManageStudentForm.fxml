@@ -12,7 +12,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane fx:id="manageStudentPane" prefHeight="900.0" prefWidth="1300.0" style="-fx-background-color: #000022;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagement.controller.ManageStudentFormController">
    <children>
       <Polyline fill="#f5bb00" layoutX="241.0" layoutY="217.0" points="160.0, -217.0, 160.0, -197.0, -241.0, -197.0, -241.0, -217.0" stroke="#f5bb00" strokeType="INSIDE" />
@@ -48,7 +47,7 @@
       <JFXDatePicker fx:id="datePikerStudentDOB" layoutX="492.0" layoutY="242.0" prefHeight="39.0" prefWidth="324.0" promptText="Date of Birth :" style="-fx-background-color: #F9D307;" />
       <JFXComboBox fx:id="combStudentGender" focusColor="WHITE" layoutX="938.0" layoutY="242.0" prefHeight="39.0" prefWidth="324.0" promptText="Gender :" style="-fx-background-color: #F9D307;" unFocusColor="WHITE" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="58.0" layoutX="920.0" layoutY="299.0" stroke="BLACK" strokeType="INSIDE" width="360.0" />
-      <JFXTextField fx:id="txtStudentSearch" layoutX="930.0" layoutY="305.0" prefHeight="45.0" prefWidth="216.0" promptText="ST-001" style="-fx-background-color: white;">
+      <JFXTextField fx:id="txtStudentSearch" layoutX="930.0" layoutY="305.0" onAction="#txtStudentSearchOnAction" prefHeight="45.0" prefWidth="216.0" promptText="ST-001" style="-fx-background-color: white;">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -68,24 +67,29 @@
             <TableColumn prefWidth="138.0" text="Gender " />
         </columns>
       </TableView>
-      <JFXButton buttonType="RAISED" layoutX="1106.0" layoutY="444.0" onAction="#btnStudentAdd" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="+ Add New">
+      <JFXButton fx:id="btnStudentAdd" buttonType="RAISED" layoutX="1106.0" layoutY="444.0" onAction="#btnStudentAddNewOnAction" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="+ Add New">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="1106.0" layoutY="607.0" onAction="#btnStudentDelete" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="Delete">
+      <JFXButton fx:id="btnStudentDelete" buttonType="RAISED" layoutX="1107.0" layoutY="693.0" onAction="#btnStudentDeleteOnAction" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="Delete">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="1106.0" layoutY="525.0" onAction="#btnStudentSave" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="Save">
+      <JFXButton fx:id="btnStudentSave" buttonType="RAISED" layoutX="1106.0" layoutY="525.0" onAction="#btnStudentSaveOnAction" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="Save">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="31.0" layoutY="36.0" onAction="#btnBackToDashboard" prefHeight="51.0" prefWidth="140.0" style="-fx-background-color: white;" text="&lt;&lt;- Back">
+      <JFXButton fx:id="btnBack1" layoutX="31.0" layoutY="36.0" onAction="#BackToDashboardOnAction" onMouseClicked="#navigateToHome" prefHeight="51.0" prefWidth="140.0" style="-fx-background-color: white;" text="&lt;&lt;- Back">
          <font>
             <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnStudentUpdate" buttonType="RAISED" layoutX="1106.0" layoutY="607.0" onAction="#btnStudentUpdateOnAction" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="Update">
+         <font>
+            <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
    </children>

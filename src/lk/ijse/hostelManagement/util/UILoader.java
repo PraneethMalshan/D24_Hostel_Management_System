@@ -15,19 +15,19 @@ public class UILoader {
     public static void loadUiDashBoard(AnchorPane anchorPane, String location) throws IOException {
 
         anchorPane.getChildren().clear();
-        anchorPane.getChildren().add(FXMLLoader.load(Objects.requireNonNull(UILoader.class.getResource("/lk/ijse/hibernate/view/" + location + ".fxml"))));
+        anchorPane.getChildren().add(FXMLLoader.load(Objects.requireNonNull(UILoader.class.getResource("/lk/ijse/hostelManagement/view/" + location + ".fxml"))));
     }
 
     public static void LoginOnAction(AnchorPane anchorPane, String location) throws IOException, SQLException {
 
         Stage window = (Stage) anchorPane.getScene().getWindow();
-        window.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(UILoader.class.getResource("/lk/ijse/hibernate/view/" + location + ".fxml")))));
+        window.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(UILoader.class.getResource("/lk/ijse/hostelManagement/view/" + location + ".fxml")))));
     }
 
     public static void NavigateToHome(AnchorPane anchorPane, String location) throws IOException, SQLException {
 
         Stage primaryStage = (Stage) (anchorPane.getScene().getWindow());
-        primaryStage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(UILoader.class.getResource("/lk/ijse/hibernate/view/" + location + ".fxml")))));
+        primaryStage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(UILoader.class.getResource("/lk/ijse/hostelManagement/view/" + location + ".fxml")))));
         primaryStage.centerOnScreen();
         Platform.runLater(() -> primaryStage.sizeToScene());
     }

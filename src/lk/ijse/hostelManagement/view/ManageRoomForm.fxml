@@ -9,7 +9,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane fx:id="ManageRoomPane" prefHeight="900.0" prefWidth="1300.0" style="-fx-background-color: #000022;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagement.controller.ManageRoomFormController">
    <children>
       <Polyline fill="#f5bb00" layoutX="241.0" layoutY="217.0" points="160.0, -217.0, 160.0, -197.0, -241.0, -197.0, -241.0, -217.0" stroke="#f5bb00" strokeType="INSIDE" />
@@ -42,7 +41,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtRoomSearch" layoutX="940.0" layoutY="315.0" prefHeight="45.0" prefWidth="216.0" promptText="RM-001" style="-fx-background-color: white;">
+      <JFXTextField fx:id="txtRoomSearch" layoutX="940.0" layoutY="315.0" onAction="#txtRoomSearchOnAction" prefHeight="45.0" prefWidth="216.0" promptText="RM-001" style="-fx-background-color: white;">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -60,22 +59,22 @@
             <TableColumn prefWidth="202.0" text="Rooms QTY" />
          </columns>
       </TableView>
-      <JFXButton buttonType="RAISED" layoutX="1116.0" layoutY="454.0" onAction="#btnRoomAdd" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="+ Add New">
+      <JFXButton fx:id="btnRoomAddNew" buttonType="RAISED" layoutX="1116.0" layoutY="454.0" onAction="#btnRoomAddNewOnAction" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="+ Add New">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="1116.0" layoutY="617.0" onAction="#btnRoomDelete" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="Delete">
+      <JFXButton fx:id="btnRoomDelete" buttonType="RAISED" layoutX="1116.0" layoutY="617.0" onAction="#btnRoomDeleteOnAction" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="Delete">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="1116.0" layoutY="535.0" onAction="#btnRoomSave" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="Save">
+      <JFXButton fx:id="btnRoomSave" buttonType="RAISED" layoutX="1116.0" layoutY="535.0" onAction="#btnRoomSaveOnAction" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="Save">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="41.0" layoutY="46.0" onAction="#btnBackManageRoomToDashboard" prefHeight="51.0" prefWidth="140.0" style="-fx-background-color: white;" text="&lt;&lt;- Back">
+      <JFXButton fx:id="btnBack" layoutX="41.0" layoutY="46.0" onAction="#btnBackManageRoomToDashboardOnAction" onMouseClicked="#navigateToHome" prefHeight="51.0" prefWidth="140.0" style="-fx-background-color: white;" text="&lt;&lt;- Back">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>

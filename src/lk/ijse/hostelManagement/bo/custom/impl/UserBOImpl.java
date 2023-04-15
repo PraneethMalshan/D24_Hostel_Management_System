@@ -33,7 +33,7 @@ public class UserBOImpl implements UserBO {
     }
 
     @Override
-    public  boolean seveUser(LoginDTO dto) throws SQLException, ClassNotFoundException {
+    public  boolean saveUser(LoginDTO dto) throws SQLException, ClassNotFoundException {
         return userDAO.save(new Loging(dto.getUserID(),dto.getName(), dto.getAddress(), dto.getContact_no(), dto.getPassword(), dto.getGender()));
     }
 

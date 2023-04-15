@@ -12,7 +12,7 @@ public interface UserBO extends SuperBO {
 
     ArrayList<LoginDTO> searchAllUser(String id) throws SQLException, ClassNotFoundException;
 
-    boolean seveUser(LoginDTO dto) throws SQLException, ClassNotFoundException;
+    boolean saveUser(LoginDTO dto) throws SQLException, ClassNotFoundException;
 
     boolean updateUser(LoginDTO dto) throws SQLException, ClassNotFoundException;
 

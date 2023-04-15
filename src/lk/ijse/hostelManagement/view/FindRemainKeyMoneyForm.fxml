@@ -9,7 +9,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane fx:id="FindRemainKeymoneyPane" prefHeight="900.0" prefWidth="1300.0" style="-fx-background-color: #000022;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagement.controller.FindRemainKeyMoneyFormController">
    <children>
       <Polyline fill="#f5bb00" layoutX="241.0" layoutY="217.0" points="160.0, -217.0, 160.0, -197.0, -241.0, -197.0, -241.0, -217.0" stroke="#f5bb00" strokeType="INSIDE" />
@@ -35,13 +34,15 @@
       <TableView fx:id="tblFindRemainKeymoney" layoutX="76.0" layoutY="401.0" prefHeight="482.0" prefWidth="955.0" style="-fx-background-color: #F6E35D; -fx-border-color: white; -fx-border-width: 10; -fx-border-radius: 20; -fx-background-radius: 20;">
          <columns>
             <TableColumn prefWidth="146.99996948242188" text="Reserve ID" />
-            <TableColumn prefWidth="198.0" text="Date" />
-            <TableColumn prefWidth="166.0" text="Student ID " />
-            <TableColumn prefWidth="167.0" text="Room Id" />
-            <TableColumn prefWidth="266.0" text="Status" />
+            <TableColumn prefWidth="90.0" text="Student Id" />
+            <TableColumn prefWidth="137.0" text="Room Id" />
+            <TableColumn prefWidth="130.0" text="Date" />
+            <TableColumn prefWidth="127.0" text="Key Money" />
+            <TableColumn prefWidth="127.0" text="Advance" />
+            <TableColumn prefWidth="151.0" text="Status" />
          </columns>
       </TableView>
-      <JFXButton layoutX="51.0" layoutY="56.0" onAction="#btnBackFindRemainToDashboard" prefHeight="51.0" prefWidth="140.0" style="-fx-background-color: white;" text="&lt;&lt;- Back">
+      <JFXButton fx:id="btnBack" layoutX="51.0" layoutY="56.0" onAction="#BackOnActionFindRemainToDashboard" onMouseClicked="#navigateToHome" prefHeight="51.0" prefWidth="140.0" style="-fx-background-color: white;" text="&lt;&lt;- Back">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
