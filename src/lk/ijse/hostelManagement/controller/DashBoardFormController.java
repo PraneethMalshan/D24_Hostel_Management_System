@@ -35,7 +35,7 @@ public class DashBoardFormController {
     private AnchorPane dashboardPane;
 
     public void userOnAction(ActionEvent event) throws IOException {
-        UILoader.loadUiDashBoard(dashboardPane, "ManageUser");
+        UILoader.loadUiDashBoard(dashboardPane, "ManageUserForm");
     }
 
 

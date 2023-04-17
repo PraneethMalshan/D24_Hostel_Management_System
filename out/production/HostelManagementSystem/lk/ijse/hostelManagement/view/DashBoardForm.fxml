@@ -54,7 +54,7 @@
             <Image url="@../assests/bac.png" />
          </image>
       </ImageView>
-      <JFXButton fx:id="btnManageUser" layoutX="1050.0" layoutY="205.0" onAction="#userOnAction" prefHeight="62.0" prefWidth="194.0" style="-fx-background-color: #DEB841;" text="Manage User">
+      <JFXButton fx:id="btnManageUser" layoutX="1050.0" layoutY="205.0" onAction="#userOnAction" onMouseClicked="#navigate" prefHeight="62.0" prefWidth="194.0" style="-fx-background-color: #DEB841;" text="Manage User">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>

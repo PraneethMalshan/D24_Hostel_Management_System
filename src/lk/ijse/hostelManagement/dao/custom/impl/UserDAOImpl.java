@@ -15,14 +15,14 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public ArrayList<Loging> getAllUsers() throws SQLException, ClassNotFoundException{
-        ArrayList<Loging>login;
+        ArrayList<Loging>loging;
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         Query query = session.createQuery("FROM Loging");
-        login = (ArrayList<Loging>) query.list();
+        loging = (ArrayList<Loging>) query.list();
         transaction.commit();
         session.close();
-        return login;
+        return loging;
     }
 
     @Override

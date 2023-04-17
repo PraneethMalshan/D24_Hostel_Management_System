@@ -72,7 +72,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="btnStudentDelete" buttonType="RAISED" layoutX="1107.0" layoutY="693.0" onAction="#btnStudentDeleteOnAction" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="Delete">
+      <JFXButton fx:id="btnStudentDelete" buttonType="RAISED" layoutX="1106.0" layoutY="611.0" onAction="#btnStudentDeleteOnAction" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="Delete">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -85,11 +85,6 @@
       <JFXButton fx:id="btnBack1" layoutX="31.0" layoutY="36.0" onAction="#BackToDashboardOnAction" onMouseClicked="#navigateToHome" prefHeight="51.0" prefWidth="140.0" style="-fx-background-color: white;" text="&lt;&lt;- Back">
          <font>
             <Font name="System Bold" size="24.0" />
-         </font>
-      </JFXButton>
-      <JFXButton fx:id="btnStudentUpdate" buttonType="RAISED" layoutX="1106.0" layoutY="607.0" onAction="#btnStudentUpdateOnAction" prefHeight="45.0" prefWidth="151.0" style="-fx-background-color: #EFCE3F;" text="Update">
-         <font>
-            <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
    </children>

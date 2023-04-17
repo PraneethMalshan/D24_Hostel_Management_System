@@ -131,7 +131,7 @@ public class ManageUserFormController implements Initializable {
         String pws = txtPassword.getText();
         String gender = combGender.getValue();
 
-        if (!id.matches("^([A-z 0-9]{6,20})$")){
+        if (!id.matches("^([A-z 0-9]{6,20})$")) {
             NotificationController.Warring("User Id", "Invalid User Id.");
             txtUserId.requestFocus();
             return;

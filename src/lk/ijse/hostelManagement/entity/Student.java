@@ -15,12 +15,13 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Cacheable
-@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+//@Cacheable
+//@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 
 public class Student {
 
     @Id
+    @Column(columnDefinition = "VARCHAR(200)")
     private String student_id;
     private String name;
     private String address;

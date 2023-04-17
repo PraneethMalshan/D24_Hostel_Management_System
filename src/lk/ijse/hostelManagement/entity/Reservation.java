@@ -19,6 +19,7 @@ import java.time.LocalDate;
 public class Reservation {
 
     @Id
+    @Column(columnDefinition = "VARCHAR(200)")
     private String res_id;
     private LocalDate date;
     @ManyToOne(cascade = CascadeType.ALL)
