@@ -41,7 +41,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </JFXButton>
-      <JFXComboBox fx:id="combStudentIdReserveForm" focusColor="WHITE" layoutX="73.0" layoutY="289.0" prefHeight="39.0" prefWidth="324.0" promptText="Student ID :" style="-fx-background-color: #F9D307;" unFocusColor="WHITE" />
+      <JFXComboBox fx:id="combStudentIdReserveForm" focusColor="WHITE" layoutX="73.0" layoutY="309.0" prefHeight="39.0" prefWidth="324.0" promptText="Student ID :" style="-fx-background-color: #F9D307;" unFocusColor="WHITE" />
       <JFXComboBox fx:id="combRoomIdReserveForm" focusColor="WHITE" layoutX="60.0" layoutY="545.0" prefHeight="39.0" prefWidth="324.0" promptText="Room ID :" style="-fx-background-color: #F9D307;" unFocusColor="WHITE" />
       <JFXTextField fx:id="txtAddress" focusColor="WHITE" layoutX="73.0" layoutY="382.0" prefHeight="39.0" prefWidth="324.0" promptText="Address :" style="-fx-background-color: #F9D307;" unFocusColor="WHITE">
          <font>
@@ -83,6 +83,6 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXTextField>
-      <Label fx:id="llbResId" layoutX="76.0" layoutY="193.0" prefHeight="31.0" prefWidth="256.0" textFill="#fc9300" />
+      <Label fx:id="llbResId" layoutX="73.0" layoutY="193.0" prefHeight="31.0" prefWidth="256.0" textFill="#fc9300" />
    </children>
 </AnchorPane>

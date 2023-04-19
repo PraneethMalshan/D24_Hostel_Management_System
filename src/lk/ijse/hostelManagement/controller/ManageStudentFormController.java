@@ -97,7 +97,7 @@ public class ManageStudentFormController implements Initializable {
         LocalDate dob = datePikerStudentDOB.getValue();
         String gender = (String) combStudentGender.getValue();
 
-        if (!id.matches("^(STU-[0-9]{3,4})$")) {
+        if (!id.matches("^(ST-[0-9]{3,4})$")) {
             NotificationController.Warring("Student Id", "Invalid Student Id.Check STU-000 type in your entered value.");
             txtStudentId.requestFocus();
             return;

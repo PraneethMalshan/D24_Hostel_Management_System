@@ -39,7 +39,7 @@
             <TableColumn prefWidth="130.0" text="Date" />
             <TableColumn prefWidth="127.0" text="Key Money" />
             <TableColumn prefWidth="127.0" text="Advance" />
-            <TableColumn prefWidth="151.0" text="Status" />
+            <TableColumn prefWidth="186.0" text="Status" />
          </columns>
       </TableView>
       <JFXButton fx:id="btnBack" layoutX="51.0" layoutY="56.0" onAction="#BackOnActionFindRemainToDashboard" onMouseClicked="#navigateToHome" prefHeight="51.0" prefWidth="140.0" style="-fx-background-color: white;" text="&lt;&lt;- Back">
